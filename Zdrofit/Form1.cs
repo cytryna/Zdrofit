@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Zdrofit.widoki;
 
 namespace Zdrofit
 {
@@ -43,9 +44,9 @@ namespace Zdrofit
 
         private void osobyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Zdrofit.widoki.Test f = new Zdrofit.widoki.Test();
-            f.MdiParent = this;
-            f.Show();
+           // Zdrofit.widoki.Test f = new Zdrofit.widoki.Test();
+           // f.MdiParent = this;
+           // f.Show();
         }
     }
 }

@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Zdrofit
+namespace Zdrofit.widoki
 {
     public partial class Rezerwacje : Form
     {
@@ -16,35 +17,26 @@ namespace Zdrofit
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void Rezerwacje_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dataSet1.GrafikSelectCommand' table. You can move, or remove it, as needed.
-            this.grafikSelectCommandTableAdapter.Fill(this.dataSet1.GrafikSelectCommand);
             // TODO: This line of code loads data into the 'dataSet1.sale' table. You can move, or remove it, as needed.
-            //this.saleTableAdapter.Fill(this.dataSet1.sale);
+            this.saleTableAdapter.Fill(this.dataSet1.sale);
             // TODO: This line of code loads data into the 'dataSet1.grafik' table. You can move, or remove it, as needed.
-            //this.grafikTableAdapter.Fill(this.dataSet1.grafik);
+            this.grafikTableAdapter.Fill(this.dataSet1.grafik);
 
         }
 
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-        }
+            var senderGrid = (DataGridView) sender;
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //this.grafikTableAdapter.Update(this.dataSet1.grafik);
-        }
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                var row = senderGrid.Rows[e.RowIndex];
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
+                Trace.WriteLine(row.Cells["dzientygodniaDataGridViewTextBoxColumn"].Value);
+            }
         }
     }
 }

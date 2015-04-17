@@ -28,7 +28,7 @@ namespace Zdrofit {
         
         private saleDataTable tablesale;
         
-        private GrafikSelectCommandDataTable tableGrafikSelectCommand;
+        private grafikDataTable tablegrafik;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -64,8 +64,8 @@ namespace Zdrofit {
                 if ((ds.Tables["sale"] != null)) {
                     base.Tables.Add(new saleDataTable(ds.Tables["sale"]));
                 }
-                if ((ds.Tables["GrafikSelectCommand"] != null)) {
-                    base.Tables.Add(new GrafikSelectCommandDataTable(ds.Tables["GrafikSelectCommand"]));
+                if ((ds.Tables["grafik"] != null)) {
+                    base.Tables.Add(new grafikDataTable(ds.Tables["grafik"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -109,9 +109,9 @@ namespace Zdrofit {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public GrafikSelectCommandDataTable GrafikSelectCommand {
+        public grafikDataTable grafik {
             get {
-                return this.tableGrafikSelectCommand;
+                return this.tablegrafik;
             }
         }
         
@@ -188,8 +188,8 @@ namespace Zdrofit {
                 if ((ds.Tables["sale"] != null)) {
                     base.Tables.Add(new saleDataTable(ds.Tables["sale"]));
                 }
-                if ((ds.Tables["GrafikSelectCommand"] != null)) {
-                    base.Tables.Add(new GrafikSelectCommandDataTable(ds.Tables["GrafikSelectCommand"]));
+                if ((ds.Tables["grafik"] != null)) {
+                    base.Tables.Add(new grafikDataTable(ds.Tables["grafik"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -236,10 +236,10 @@ namespace Zdrofit {
                     this.tablesale.InitVars();
                 }
             }
-            this.tableGrafikSelectCommand = ((GrafikSelectCommandDataTable)(base.Tables["GrafikSelectCommand"]));
+            this.tablegrafik = ((grafikDataTable)(base.Tables["grafik"]));
             if ((initTable == true)) {
-                if ((this.tableGrafikSelectCommand != null)) {
-                    this.tableGrafikSelectCommand.InitVars();
+                if ((this.tablegrafik != null)) {
+                    this.tablegrafik.InitVars();
                 }
             }
         }
@@ -256,8 +256,8 @@ namespace Zdrofit {
             base.Tables.Add(this.tableOsobySelectCommand);
             this.tablesale = new saleDataTable();
             base.Tables.Add(this.tablesale);
-            this.tableGrafikSelectCommand = new GrafikSelectCommandDataTable();
-            base.Tables.Add(this.tableGrafikSelectCommand);
+            this.tablegrafik = new grafikDataTable();
+            base.Tables.Add(this.tablegrafik);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -274,7 +274,7 @@ namespace Zdrofit {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeGrafikSelectCommand() {
+        private bool ShouldSerializegrafik() {
             return false;
         }
         
@@ -340,7 +340,7 @@ namespace Zdrofit {
         public delegate void saleRowChangeEventHandler(object sender, saleRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void GrafikSelectCommandRowChangeEventHandler(object sender, GrafikSelectCommandRowChangeEvent e);
+        public delegate void grafikRowChangeEventHandler(object sender, grafikRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1021,7 +1021,7 @@ namespace Zdrofit {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class GrafikSelectCommandDataTable : global::System.Data.TypedTableBase<GrafikSelectCommandRow> {
+        public partial class grafikDataTable : global::System.Data.TypedTableBase<grafikRow> {
             
             private global::System.Data.DataColumn columnid;
             
@@ -1041,8 +1041,8 @@ namespace Zdrofit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GrafikSelectCommandDataTable() {
-                this.TableName = "GrafikSelectCommand";
+            public grafikDataTable() {
+                this.TableName = "grafik";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1050,7 +1050,7 @@ namespace Zdrofit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal GrafikSelectCommandDataTable(global::System.Data.DataTable table) {
+            internal grafikDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1067,7 +1067,7 @@ namespace Zdrofit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected GrafikSelectCommandDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected grafikDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1147,34 +1147,34 @@ namespace Zdrofit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GrafikSelectCommandRow this[int index] {
+            public grafikRow this[int index] {
                 get {
-                    return ((GrafikSelectCommandRow)(this.Rows[index]));
+                    return ((grafikRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event GrafikSelectCommandRowChangeEventHandler GrafikSelectCommandRowChanging;
+            public event grafikRowChangeEventHandler grafikRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event GrafikSelectCommandRowChangeEventHandler GrafikSelectCommandRowChanged;
+            public event grafikRowChangeEventHandler grafikRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event GrafikSelectCommandRowChangeEventHandler GrafikSelectCommandRowDeleting;
+            public event grafikRowChangeEventHandler grafikRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event GrafikSelectCommandRowChangeEventHandler GrafikSelectCommandRowDeleted;
+            public event grafikRowChangeEventHandler grafikRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddGrafikSelectCommandRow(GrafikSelectCommandRow row) {
+            public void AddgrafikRow(grafikRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GrafikSelectCommandRow AddGrafikSelectCommandRow(int dzien_tygodnia, System.TimeSpan godzina_od, System.TimeSpan godzina_do, int zajecia, string sala, string opis, int instruktor_id) {
-                GrafikSelectCommandRow rowGrafikSelectCommandRow = ((GrafikSelectCommandRow)(this.NewRow()));
+            public grafikRow AddgrafikRow(int dzien_tygodnia, System.TimeSpan godzina_od, System.TimeSpan godzina_do, int zajecia, int sala, string opis, int instruktor_id) {
+                grafikRow rowgrafikRow = ((grafikRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         dzien_tygodnia,
@@ -1184,15 +1184,22 @@ namespace Zdrofit {
                         sala,
                         opis,
                         instruktor_id};
-                rowGrafikSelectCommandRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowGrafikSelectCommandRow);
-                return rowGrafikSelectCommandRow;
+                rowgrafikRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowgrafikRow);
+                return rowgrafikRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public grafikRow FindByid(int id) {
+                return ((grafikRow)(this.Rows.Find(new object[] {
+                            id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                GrafikSelectCommandDataTable cln = ((GrafikSelectCommandDataTable)(base.Clone()));
+                grafikDataTable cln = ((grafikDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1200,7 +1207,7 @@ namespace Zdrofit {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new GrafikSelectCommandDataTable();
+                return new grafikDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1229,50 +1236,53 @@ namespace Zdrofit {
                 base.Columns.Add(this.columngodzina_do);
                 this.columnzajecia = new global::System.Data.DataColumn("zajecia", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnzajecia);
-                this.columnsala = new global::System.Data.DataColumn("sala", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnsala = new global::System.Data.DataColumn("sala", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsala);
                 this.columnopis = new global::System.Data.DataColumn("opis", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnopis);
                 this.columninstruktor_id = new global::System.Data.DataColumn("instruktor_id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columninstruktor_id);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnid}, true));
                 this.columnid.AutoIncrement = true;
                 this.columnid.AutoIncrementSeed = -1;
                 this.columnid.AutoIncrementStep = -1;
                 this.columnid.AllowDBNull = false;
                 this.columnid.ReadOnly = true;
+                this.columnid.Unique = true;
                 this.columndzien_tygodnia.AllowDBNull = false;
                 this.columngodzina_od.AllowDBNull = false;
                 this.columngodzina_do.AllowDBNull = false;
                 this.columnzajecia.AllowDBNull = false;
-                this.columnsala.MaxLength = 50;
+                this.columnsala.AllowDBNull = false;
                 this.columnopis.MaxLength = 2147483647;
                 this.columninstruktor_id.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GrafikSelectCommandRow NewGrafikSelectCommandRow() {
-                return ((GrafikSelectCommandRow)(this.NewRow()));
+            public grafikRow NewgrafikRow() {
+                return ((grafikRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new GrafikSelectCommandRow(builder);
+                return new grafikRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(GrafikSelectCommandRow);
+                return typeof(grafikRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.GrafikSelectCommandRowChanged != null)) {
-                    this.GrafikSelectCommandRowChanged(this, new GrafikSelectCommandRowChangeEvent(((GrafikSelectCommandRow)(e.Row)), e.Action));
+                if ((this.grafikRowChanged != null)) {
+                    this.grafikRowChanged(this, new grafikRowChangeEvent(((grafikRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1280,8 +1290,8 @@ namespace Zdrofit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.GrafikSelectCommandRowChanging != null)) {
-                    this.GrafikSelectCommandRowChanging(this, new GrafikSelectCommandRowChangeEvent(((GrafikSelectCommandRow)(e.Row)), e.Action));
+                if ((this.grafikRowChanging != null)) {
+                    this.grafikRowChanging(this, new grafikRowChangeEvent(((grafikRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1289,8 +1299,8 @@ namespace Zdrofit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.GrafikSelectCommandRowDeleted != null)) {
-                    this.GrafikSelectCommandRowDeleted(this, new GrafikSelectCommandRowChangeEvent(((GrafikSelectCommandRow)(e.Row)), e.Action));
+                if ((this.grafikRowDeleted != null)) {
+                    this.grafikRowDeleted(this, new grafikRowChangeEvent(((grafikRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1298,14 +1308,14 @@ namespace Zdrofit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.GrafikSelectCommandRowDeleting != null)) {
-                    this.GrafikSelectCommandRowDeleting(this, new GrafikSelectCommandRowChangeEvent(((GrafikSelectCommandRow)(e.Row)), e.Action));
+                if ((this.grafikRowDeleting != null)) {
+                    this.grafikRowDeleting(this, new grafikRowChangeEvent(((grafikRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveGrafikSelectCommandRow(GrafikSelectCommandRow row) {
+            public void RemovegrafikRow(grafikRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1332,7 +1342,7 @@ namespace Zdrofit {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "GrafikSelectCommandDataTable";
+                attribute2.FixedValue = "grafikDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1641,25 +1651,25 @@ namespace Zdrofit {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class GrafikSelectCommandRow : global::System.Data.DataRow {
+        public partial class grafikRow : global::System.Data.DataRow {
             
-            private GrafikSelectCommandDataTable tableGrafikSelectCommand;
+            private grafikDataTable tablegrafik;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal GrafikSelectCommandRow(global::System.Data.DataRowBuilder rb) : 
+            internal grafikRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableGrafikSelectCommand = ((GrafikSelectCommandDataTable)(this.Table));
+                this.tablegrafik = ((grafikDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int id {
                 get {
-                    return ((int)(this[this.tableGrafikSelectCommand.idColumn]));
+                    return ((int)(this[this.tablegrafik.idColumn]));
                 }
                 set {
-                    this[this.tableGrafikSelectCommand.idColumn] = value;
+                    this[this.tablegrafik.idColumn] = value;
                 }
             }
             
@@ -1667,10 +1677,10 @@ namespace Zdrofit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int dzien_tygodnia {
                 get {
-                    return ((int)(this[this.tableGrafikSelectCommand.dzien_tygodniaColumn]));
+                    return ((int)(this[this.tablegrafik.dzien_tygodniaColumn]));
                 }
                 set {
-                    this[this.tableGrafikSelectCommand.dzien_tygodniaColumn] = value;
+                    this[this.tablegrafik.dzien_tygodniaColumn] = value;
                 }
             }
             
@@ -1678,10 +1688,10 @@ namespace Zdrofit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.TimeSpan godzina_od {
                 get {
-                    return ((global::System.TimeSpan)(this[this.tableGrafikSelectCommand.godzina_odColumn]));
+                    return ((global::System.TimeSpan)(this[this.tablegrafik.godzina_odColumn]));
                 }
                 set {
-                    this[this.tableGrafikSelectCommand.godzina_odColumn] = value;
+                    this[this.tablegrafik.godzina_odColumn] = value;
                 }
             }
             
@@ -1689,10 +1699,10 @@ namespace Zdrofit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.TimeSpan godzina_do {
                 get {
-                    return ((global::System.TimeSpan)(this[this.tableGrafikSelectCommand.godzina_doColumn]));
+                    return ((global::System.TimeSpan)(this[this.tablegrafik.godzina_doColumn]));
                 }
                 set {
-                    this[this.tableGrafikSelectCommand.godzina_doColumn] = value;
+                    this[this.tablegrafik.godzina_doColumn] = value;
                 }
             }
             
@@ -1700,26 +1710,21 @@ namespace Zdrofit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int zajecia {
                 get {
-                    return ((int)(this[this.tableGrafikSelectCommand.zajeciaColumn]));
+                    return ((int)(this[this.tablegrafik.zajeciaColumn]));
                 }
                 set {
-                    this[this.tableGrafikSelectCommand.zajeciaColumn] = value;
+                    this[this.tablegrafik.zajeciaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string sala {
+            public int sala {
                 get {
-                    try {
-                        return ((string)(this[this.tableGrafikSelectCommand.salaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'sala\' in table \'GrafikSelectCommand\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tablegrafik.salaColumn]));
                 }
                 set {
-                    this[this.tableGrafikSelectCommand.salaColumn] = value;
+                    this[this.tablegrafik.salaColumn] = value;
                 }
             }
             
@@ -1728,14 +1733,14 @@ namespace Zdrofit {
             public string opis {
                 get {
                     try {
-                        return ((string)(this[this.tableGrafikSelectCommand.opisColumn]));
+                        return ((string)(this[this.tablegrafik.opisColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'opis\' in table \'GrafikSelectCommand\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'opis\' in table \'grafik\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableGrafikSelectCommand.opisColumn] = value;
+                    this[this.tablegrafik.opisColumn] = value;
                 }
             }
             
@@ -1743,35 +1748,23 @@ namespace Zdrofit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int instruktor_id {
                 get {
-                    return ((int)(this[this.tableGrafikSelectCommand.instruktor_idColumn]));
+                    return ((int)(this[this.tablegrafik.instruktor_idColumn]));
                 }
                 set {
-                    this[this.tableGrafikSelectCommand.instruktor_idColumn] = value;
+                    this[this.tablegrafik.instruktor_idColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IssalaNull() {
-                return this.IsNull(this.tableGrafikSelectCommand.salaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetsalaNull() {
-                this[this.tableGrafikSelectCommand.salaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsopisNull() {
-                return this.IsNull(this.tableGrafikSelectCommand.opisColumn);
+                return this.IsNull(this.tablegrafik.opisColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetopisNull() {
-                this[this.tableGrafikSelectCommand.opisColumn] = global::System.Convert.DBNull;
+                this[this.tablegrafik.opisColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1847,22 +1840,22 @@ namespace Zdrofit {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class GrafikSelectCommandRowChangeEvent : global::System.EventArgs {
+        public class grafikRowChangeEvent : global::System.EventArgs {
             
-            private GrafikSelectCommandRow eventRow;
+            private grafikRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GrafikSelectCommandRowChangeEvent(GrafikSelectCommandRow row, global::System.Data.DataRowAction action) {
+            public grafikRowChangeEvent(grafikRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GrafikSelectCommandRow Row {
+            public grafikRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -2755,7 +2748,7 @@ namespace Zdrofit.DataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class GrafikSelectCommandTableAdapter : global::System.ComponentModel.Component {
+    public partial class grafikTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -2769,7 +2762,7 @@ namespace Zdrofit.DataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public GrafikSelectCommandTableAdapter() {
+        public grafikTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -2866,7 +2859,7 @@ namespace Zdrofit.DataSet1TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "GrafikSelectCommand";
+            tableMapping.DataSetTable = "grafik";
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("dzien_tygodnia", "dzien_tygodnia");
             tableMapping.ColumnMappings.Add("godzina_od", "godzina_od");
@@ -2880,46 +2873,46 @@ namespace Zdrofit.DataSet1TableAdapters {
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "dbo.GrafikDeleteCommand";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dzien_tygodnia", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "dzien_tygodnia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_godzina_od", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 16, 7, "godzina_od", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_godzina_do", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 16, 7, "godzina_do", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_zajecia", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "zajecia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sala", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "sala", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_instruktor_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "instruktor_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Variant, 0, global::System.Data.ParameterDirection.ReturnValue, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dzien_tygodnia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dzien_tygodnia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_godzina_od", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "godzina_od", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_godzina_do", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "godzina_do", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_zajecia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zajecia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sala", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sala", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_instruktor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "instruktor_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "dbo.GrafikInsertCommand";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dzien_tygodnia", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "dzien_tygodnia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@godzina_od", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 16, 7, "godzina_od", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@godzina_do", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 16, 7, "godzina_do", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@zajecia", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "zajecia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sala", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "sala", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@opis", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "opis", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@instruktor_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "instruktor_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Variant, 0, global::System.Data.ParameterDirection.ReturnValue, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dzien_tygodnia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dzien_tygodnia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@godzina_od", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "godzina_od", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@godzina_do", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "godzina_do", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@zajecia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zajecia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sala", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sala", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@opis", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "opis", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@instruktor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "instruktor_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "dbo.GrafikUpdateCommand";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dzien_tygodnia", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "dzien_tygodnia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@godzina_od", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 16, 7, "godzina_od", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@godzina_do", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 16, 7, "godzina_do", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@zajecia", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "zajecia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sala", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "sala", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@opis", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "opis", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@instruktor_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "instruktor_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dzien_tygodnia", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "dzien_tygodnia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_godzina_od", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 16, 7, "godzina_od", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_godzina_do", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 16, 7, "godzina_do", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_zajecia", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "zajecia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sala", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "sala", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_instruktor_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "instruktor_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Variant, 0, global::System.Data.ParameterDirection.ReturnValue, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dzien_tygodnia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dzien_tygodnia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@godzina_od", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "godzina_od", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@godzina_do", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "godzina_do", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@zajecia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zajecia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sala", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sala", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@opis", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "opis", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@instruktor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "instruktor_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dzien_tygodnia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dzien_tygodnia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_godzina_od", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "godzina_od", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_godzina_do", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "godzina_do", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_zajecia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zajecia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sala", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sala", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_instruktor_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "instruktor_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2937,14 +2930,14 @@ namespace Zdrofit.DataSet1TableAdapters {
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "dbo.GrafikSelectCommand";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Variant, 0, global::System.Data.ParameterDirection.ReturnValue, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet1.GrafikSelectCommandDataTable dataTable) {
+        public virtual int Fill(DataSet1.grafikDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2957,9 +2950,9 @@ namespace Zdrofit.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet1.GrafikSelectCommandDataTable GetData() {
+        public virtual DataSet1.grafikDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet1.GrafikSelectCommandDataTable dataTable = new DataSet1.GrafikSelectCommandDataTable();
+            DataSet1.grafikDataTable dataTable = new DataSet1.grafikDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -2967,7 +2960,7 @@ namespace Zdrofit.DataSet1TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet1.GrafikSelectCommandDataTable dataTable) {
+        public virtual int Update(DataSet1.grafikDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -2975,7 +2968,7 @@ namespace Zdrofit.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DataSet1 dataSet) {
-            return this.Adapter.Update(dataSet, "GrafikSelectCommand");
+            return this.Adapter.Update(dataSet, "grafik");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2997,49 +2990,14 @@ namespace Zdrofit.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(global::System.Nullable<int> Original_id, global::System.Nullable<int> Original_dzien_tygodnia, global::System.Nullable<global::System.TimeSpan> Original_godzina_od, global::System.Nullable<global::System.TimeSpan> Original_godzina_do, global::System.Nullable<int> Original_zajecia, global::System.Nullable<int> Original_sala, global::System.Nullable<int> Original_instruktor_id) {
-            if ((Original_id.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_id.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((Original_dzien_tygodnia.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_dzien_tygodnia.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((Original_godzina_od.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((System.TimeSpan)(Original_godzina_od.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((Original_godzina_do.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((System.TimeSpan)(Original_godzina_do.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((Original_zajecia.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_zajecia.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Original_sala.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_sala.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((Original_instruktor_id.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_instruktor_id.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
+        public virtual int Delete(int Original_id, int Original_dzien_tygodnia, System.TimeSpan Original_godzina_od, System.TimeSpan Original_godzina_do, int Original_zajecia, int Original_sala, int Original_instruktor_id) {
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_id));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_dzien_tygodnia));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((System.TimeSpan)(Original_godzina_od));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((System.TimeSpan)(Original_godzina_do));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_zajecia));
+            this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_sala));
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_instruktor_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3060,49 +3018,19 @@ namespace Zdrofit.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> dzien_tygodnia, global::System.Nullable<global::System.TimeSpan> godzina_od, global::System.Nullable<global::System.TimeSpan> godzina_do, global::System.Nullable<int> zajecia, global::System.Nullable<int> sala, string opis, global::System.Nullable<int> instruktor_id) {
-            if ((dzien_tygodnia.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(dzien_tygodnia.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((godzina_od.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((System.TimeSpan)(godzina_od.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((godzina_do.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((System.TimeSpan)(godzina_do.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((zajecia.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(zajecia.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((sala.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(sala.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
+        public virtual int Insert(int dzien_tygodnia, System.TimeSpan godzina_od, System.TimeSpan godzina_do, int zajecia, int sala, string opis, int instruktor_id) {
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(dzien_tygodnia));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((System.TimeSpan)(godzina_od));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((System.TimeSpan)(godzina_do));
+            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(zajecia));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(sala));
             if ((opis == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = ((string)(opis));
             }
-            if ((instruktor_id.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(instruktor_id.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.InsertCommand.Parameters[7].Value = ((int)(instruktor_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3123,97 +3051,27 @@ namespace Zdrofit.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> dzien_tygodnia, global::System.Nullable<global::System.TimeSpan> godzina_od, global::System.Nullable<global::System.TimeSpan> godzina_do, global::System.Nullable<int> zajecia, global::System.Nullable<int> sala, string opis, global::System.Nullable<int> instruktor_id, global::System.Nullable<int> Original_id, global::System.Nullable<int> Original_dzien_tygodnia, global::System.Nullable<global::System.TimeSpan> Original_godzina_od, global::System.Nullable<global::System.TimeSpan> Original_godzina_do, global::System.Nullable<int> Original_zajecia, global::System.Nullable<int> Original_sala, global::System.Nullable<int> Original_instruktor_id, global::System.Nullable<int> id) {
-            if ((dzien_tygodnia.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(dzien_tygodnia.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((godzina_od.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.TimeSpan)(godzina_od.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((godzina_do.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.TimeSpan)(godzina_do.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((zajecia.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(zajecia.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((sala.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(sala.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
+        public virtual int Update(int dzien_tygodnia, System.TimeSpan godzina_od, System.TimeSpan godzina_do, int zajecia, int sala, string opis, int instruktor_id, int Original_id, int Original_dzien_tygodnia, System.TimeSpan Original_godzina_od, System.TimeSpan Original_godzina_do, int Original_zajecia, int Original_sala, int Original_instruktor_id, int id) {
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(dzien_tygodnia));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.TimeSpan)(godzina_od));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.TimeSpan)(godzina_do));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(zajecia));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(sala));
             if ((opis == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(opis));
             }
-            if ((instruktor_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(instruktor_id.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((Original_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_id.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((Original_dzien_tygodnia.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_dzien_tygodnia.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((Original_godzina_od.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((System.TimeSpan)(Original_godzina_od.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((Original_godzina_do.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.TimeSpan)(Original_godzina_do.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            if ((Original_zajecia.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_zajecia.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            if ((Original_sala.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_sala.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            if ((Original_instruktor_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_instruktor_id.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            if ((id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(id.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(instruktor_id));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_id));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_dzien_tygodnia));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((System.TimeSpan)(Original_godzina_od));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((System.TimeSpan)(Original_godzina_do));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_zajecia));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_sala));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_instruktor_id));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3228,6 +3086,14 @@ namespace Zdrofit.DataSet1TableAdapters {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int dzien_tygodnia, System.TimeSpan godzina_od, System.TimeSpan godzina_do, int zajecia, int sala, string opis, int instruktor_id, int Original_id, int Original_dzien_tygodnia, System.TimeSpan Original_godzina_od, System.TimeSpan Original_godzina_do, int Original_zajecia, int Original_sala, int Original_instruktor_id) {
+            return this.Update(dzien_tygodnia, godzina_od, godzina_do, zajecia, sala, opis, instruktor_id, Original_id, Original_dzien_tygodnia, Original_godzina_od, Original_godzina_do, Original_zajecia, Original_sala, Original_instruktor_id, Original_id);
         }
     }
     
@@ -3247,7 +3113,7 @@ namespace Zdrofit.DataSet1TableAdapters {
         
         private saleTableAdapter _saleTableAdapter;
         
-        private GrafikSelectCommandTableAdapter _grafikSelectCommandTableAdapter;
+        private grafikTableAdapter _grafikTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -3297,12 +3163,12 @@ namespace Zdrofit.DataSet1TableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public GrafikSelectCommandTableAdapter GrafikSelectCommandTableAdapter {
+        public grafikTableAdapter grafikTableAdapter {
             get {
-                return this._grafikSelectCommandTableAdapter;
+                return this._grafikTableAdapter;
             }
             set {
-                this._grafikSelectCommandTableAdapter = value;
+                this._grafikTableAdapter = value;
             }
         }
         
@@ -3333,9 +3199,9 @@ namespace Zdrofit.DataSet1TableAdapters {
                             && (this._saleTableAdapter.Connection != null))) {
                     return this._saleTableAdapter.Connection;
                 }
-                if (((this._grafikSelectCommandTableAdapter != null) 
-                            && (this._grafikSelectCommandTableAdapter.Connection != null))) {
-                    return this._grafikSelectCommandTableAdapter.Connection;
+                if (((this._grafikTableAdapter != null) 
+                            && (this._grafikTableAdapter.Connection != null))) {
+                    return this._grafikTableAdapter.Connection;
                 }
                 return null;
             }
@@ -3356,7 +3222,7 @@ namespace Zdrofit.DataSet1TableAdapters {
                 if ((this._saleTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._grafikSelectCommandTableAdapter != null)) {
+                if ((this._grafikTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -3388,12 +3254,12 @@ namespace Zdrofit.DataSet1TableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._grafikSelectCommandTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.GrafikSelectCommand.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._grafikTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.grafik.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._grafikSelectCommandTableAdapter.Update(updatedRows));
+                    result = (result + this._grafikTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -3423,11 +3289,11 @@ namespace Zdrofit.DataSet1TableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._grafikSelectCommandTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.GrafikSelectCommand.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._grafikTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.grafik.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._grafikSelectCommandTableAdapter.Update(addedRows));
+                    result = (result + this._grafikTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -3441,11 +3307,11 @@ namespace Zdrofit.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._grafikSelectCommandTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.GrafikSelectCommand.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._grafikTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.grafik.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._grafikSelectCommandTableAdapter.Update(deletedRows));
+                    result = (result + this._grafikTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -3514,8 +3380,8 @@ namespace Zdrofit.DataSet1TableAdapters {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._grafikSelectCommandTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._grafikSelectCommandTableAdapter.Connection) == false))) {
+            if (((this._grafikTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._grafikTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -3569,13 +3435,13 @@ namespace Zdrofit.DataSet1TableAdapters {
                         adaptersWithAcceptChangesDuringUpdate.Add(this._saleTableAdapter.Adapter);
                     }
                 }
-                if ((this._grafikSelectCommandTableAdapter != null)) {
-                    revertConnections.Add(this._grafikSelectCommandTableAdapter, this._grafikSelectCommandTableAdapter.Connection);
-                    this._grafikSelectCommandTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._grafikSelectCommandTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._grafikSelectCommandTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._grafikSelectCommandTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._grafikSelectCommandTableAdapter.Adapter);
+                if ((this._grafikTableAdapter != null)) {
+                    revertConnections.Add(this._grafikTableAdapter, this._grafikTableAdapter.Connection);
+                    this._grafikTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._grafikTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._grafikTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._grafikTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._grafikTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -3644,9 +3510,9 @@ namespace Zdrofit.DataSet1TableAdapters {
                     this._saleTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._saleTableAdapter]));
                     this._saleTableAdapter.Transaction = null;
                 }
-                if ((this._grafikSelectCommandTableAdapter != null)) {
-                    this._grafikSelectCommandTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._grafikSelectCommandTableAdapter]));
-                    this._grafikSelectCommandTableAdapter.Transaction = null;
+                if ((this._grafikTableAdapter != null)) {
+                    this._grafikTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._grafikTableAdapter]));
+                    this._grafikTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
