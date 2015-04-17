@@ -34,15 +34,22 @@ namespace Zdrofit.widoki
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
             var senderGrid = (DataGridView) sender;
 
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
+                
                 var row = senderGrid.Rows[e.RowIndex];
 
-                Trace.WriteLine(row.Cells["dzientygodniaDataGridViewTextBoxColumn"].Value);
+                tabControl1.SelectedIndex = 1;
+                //Trace.WriteLine(row.Cells["zajeciaDataGridViewTextBoxColumn"].Value);
+                //var a = row.Cells["zajeciaDataGridViewTextBoxColumn"];
+                label4.Text = row.Cells["zajeciaDataGridViewTextBoxColumn"].FormattedValue.ToString();
             }
+
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

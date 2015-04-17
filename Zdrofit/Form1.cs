@@ -44,9 +44,9 @@ namespace Zdrofit
 
         private void osobyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           // Zdrofit.widoki.Test f = new Zdrofit.widoki.Test();
-           // f.MdiParent = this;
-           // f.Show();
+            Zdrofit.widoki.Osoby f = new Zdrofit.widoki.Osoby();
+            f.MdiParent = this;
+            f.Show();
         }
     }
 }

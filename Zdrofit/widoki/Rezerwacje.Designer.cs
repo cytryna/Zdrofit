@@ -34,6 +34,8 @@
             this.dataSet1 = new Zdrofit.DataSet1();
             this.zajeciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.saleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.osobyProcownicySelectCommandBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet11 = new Zdrofit.DataSet1();
             this.grafikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.grafikTableAdapter = new Zdrofit.DataSet1TableAdapters.grafikTableAdapter();
             this.saleTableAdapter = new Zdrofit.DataSet1TableAdapters.saleTableAdapter();
@@ -41,15 +43,13 @@
             this.dni_tygodniaTableAdapter = new Zdrofit.DataSet1TableAdapters.dni_tygodniaTableAdapter();
             this.zajeciaTableAdapter = new Zdrofit.DataSet1TableAdapters.zajeciaTableAdapter();
             this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet11 = new Zdrofit.DataSet1();
-            this.osobyProcownicySelectCommandBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.osobyProcownicySelectCommandTableAdapter = new Zdrofit.DataSet1TableAdapters.OsobyProcownicySelectCommandTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.osobyProcownicySelectCommandTableAdapter1 = new Zdrofit.DataSet1TableAdapters.OsobyProcownicySelectCommandTableAdapter();
             this.dzientygodniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.godzinaodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,20 +59,25 @@
             this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.instruktoridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Button = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dnitygodniaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zajeciaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.saleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.osobyProcownicySelectCommandBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grafikBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.saleBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.osobyProcownicySelectCommandBindingSource)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -116,6 +121,16 @@
             this.saleBindingSource.DataMember = "sale";
             this.saleBindingSource.DataSource = this.dataSet1;
             // 
+            // osobyProcownicySelectCommandBindingSource
+            // 
+            this.osobyProcownicySelectCommandBindingSource.DataMember = "OsobyProcownicySelectCommand";
+            this.osobyProcownicySelectCommandBindingSource.DataSource = this.dataSet11;
+            // 
+            // dataSet11
+            // 
+            this.dataSet11.DataSetName = "DataSet1";
+            this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // grafikBindingSource
             // 
             this.grafikBindingSource.DataMember = "grafik";
@@ -146,16 +161,6 @@
             // 
             this.dataSet1BindingSource.DataSource = this.dataSet1;
             this.dataSet1BindingSource.Position = 0;
-            // 
-            // dataSet11
-            // 
-            this.dataSet11.DataSetName = "DataSet1";
-            this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // osobyProcownicySelectCommandBindingSource
-            // 
-            this.osobyProcownicySelectCommandBindingSource.DataMember = "OsobyProcownicySelectCommand";
-            this.osobyProcownicySelectCommandBindingSource.DataSource = this.dataSet11;
             // 
             // osobyProcownicySelectCommandTableAdapter
             // 
@@ -194,16 +199,6 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1123, 624);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Rezerwacja";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
@@ -227,6 +222,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1111, 24);
             this.panel1.TabIndex = 2;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.label4);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1123, 624);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Rezerwacja";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // osobyProcownicySelectCommandTableAdapter1
             // 
@@ -280,7 +289,7 @@
             // opisDataGridViewTextBoxColumn
             // 
             this.opisDataGridViewTextBoxColumn.DataPropertyName = "opis";
-            this.opisDataGridViewTextBoxColumn.HeaderText = "opis";
+            this.opisDataGridViewTextBoxColumn.HeaderText = "uwagi";
             this.opisDataGridViewTextBoxColumn.Name = "opisDataGridViewTextBoxColumn";
             // 
             // instruktoridDataGridViewTextBoxColumn
@@ -301,6 +310,42 @@
             this.Button.Text = "Rezerwuj";
             this.Button.UseColumnTextForButtonValue = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(88, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Zajęcia";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(544, 306);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "label2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(552, 314);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "label3";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(145, 56);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "label4";
+            // 
             // Rezerwacje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,15 +360,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zajeciaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.saleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.osobyProcownicySelectCommandBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grafikBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.saleBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.osobyProcownicySelectCommandBindingSource)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -360,5 +407,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn opisDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn instruktoridDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Button;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

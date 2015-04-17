@@ -61,6 +61,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="widoki\Osoby.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="widoki\Osoby.Designer.cs">
+      <DependentUpon>Osoby.cs</DependentUpon>
+    </Compile>
     <Compile Include="widoki\Rezerwacje.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="widoki\Osoby.resx">
+      <DependentUpon>Osoby.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="widoki\Rezerwacje.resx">
       <DependentUpon>Rezerwacje.cs</DependentUpon>
     </EmbeddedResource>
