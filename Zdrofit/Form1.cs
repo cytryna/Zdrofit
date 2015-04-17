@@ -24,7 +24,7 @@ namespace Zdrofit
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("hgsfs");
+            MessageBox.Show("Radosław Wichrowski s10338");
         }
 
         private void rezerwacjeToolStripMenuItem1_Click(object sender, EventArgs e)

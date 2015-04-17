@@ -35,7 +35,6 @@
             this.osobyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.saleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new Zdrofit.DataSet1();
             this.saleTableAdapter = new Zdrofit.DataSet1TableAdapters.saleTableAdapter();
@@ -51,7 +50,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(663, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1326, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -94,17 +93,6 @@
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.DataSource = this.saleBindingSource;
-            this.comboBox1.DisplayMember = "nazwa";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(275, 220);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.ValueMember = "id";
-            // 
             // saleBindingSource
             // 
             this.saleBindingSource.DataMember = "sale";
@@ -123,8 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 504);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(1326, 738);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -148,7 +135,6 @@
         private System.Windows.Forms.ToolStripMenuItem osobyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ComboBox comboBox1;
         private DataSet1 dataSet1;
         private System.Windows.Forms.BindingSource saleBindingSource;
         private DataSet1TableAdapters.saleTableAdapter saleTableAdapter;

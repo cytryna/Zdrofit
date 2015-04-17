@@ -19,6 +19,12 @@ namespace Zdrofit.widoki
 
         private void Rezerwacje_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet11.OsobyProcownicySelectCommand' table. You can move, or remove it, as needed.
+            this.osobyProcownicySelectCommandTableAdapter.Fill(this.dataSet11.OsobyProcownicySelectCommand);
+            // TODO: This line of code loads data into the 'dataSet1.zajecia' table. You can move, or remove it, as needed.
+            this.zajeciaTableAdapter.Fill(this.dataSet1.zajecia);
+            // TODO: This line of code loads data into the 'dataSet1.dni_tygodnia' table. You can move, or remove it, as needed.
+            this.dni_tygodniaTableAdapter.Fill(this.dataSet1.dni_tygodnia);
             // TODO: This line of code loads data into the 'dataSet1.sale' table. You can move, or remove it, as needed.
             this.saleTableAdapter.Fill(this.dataSet1.sale);
             // TODO: This line of code loads data into the 'dataSet1.grafik' table. You can move, or remove it, as needed.
@@ -37,6 +43,17 @@ namespace Zdrofit.widoki
 
                 Trace.WriteLine(row.Cells["dzientygodniaDataGridViewTextBoxColumn"].Value);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.grafikTableAdapter.Update(this.dataSet1.grafik);
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
